@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>jQuery groupedCrossFader Demo</title>
+		
+		
+			<style type="text/css">
+				body, html{
+					height: 100%;
+					position: relative;
+					width: 100%;
+					color: #444444;
+					font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
+				}
+				body{
+					width: 1000px;
+					margin: 100px auto;
+					height: 500px;
+				}
+				ul{
+					margin: 0 auto;
+					width:1000px;
+					border: 2px dashed #e2e2e2;
+					position: relative;
+				}
+				ul li{
+					float: left;
+				}		
+			</style>
+	</head>
+	<body>
+	<h1>jQuery groupedCrossFader Demo</h1>
+    <ul id="crossFader" >
+        <li><img src="dummyImage.jpg" width="200" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="400" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="500" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="300" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="100" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="200" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="500" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="200" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="500" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="300" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="100" height="100" /></li>
+    </ul>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+	<script>window.jQuery || document.write("<script src='jquery-1.5.1.min.js'>\x3C/script>")</script>
+	<script src="jquery.groupedCrossFader.js"></script>    
+
+    <script type="text/javascript">
+    $(document).ready(function() { 
+        $('#crossFader').groupedCrossFader();
+    });
+    </script>
+	</body>
+</html>
+
+
