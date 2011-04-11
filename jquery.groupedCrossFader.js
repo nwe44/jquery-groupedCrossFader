@@ -5,7 +5,7 @@
 *
 *	Author: 	Nick Evans
 *				www.nick-evans.com
-*	Version:	0.1
+*	Version:	0.11
 *	
 *	This plugin takes an item, groups it's children into slugs that have a smaller 
 *	width than the parent and then fades between them. Unlike many carousels, it 
@@ -107,14 +107,22 @@
 					});
 
 		          }
+
 		          if(noOfSlugs){ // don't attempt to animate a slide of one.
+		          
 					methods.startAuto.apply(this);
-					$(this).mouseover(function(){
-						methods.pauseAuto.apply(this);
-					});
-					$(this).mouseout(function(){
-						methods.startAuto.apply(this);
-					});
+
+					if(opts.hoverPause){
+						$(this).mouseover(function(){
+							methods.pauseAuto.apply(this);
+						});
+
+						$(this).mouseout(function(){
+							methods.startAuto.apply(this);
+						});
+
+					}
+
 		          }
 			      
 			          
@@ -173,7 +181,6 @@
          */
         pauseAuto: function() {
 	       return $(this).each(function(){
-				log('pauseAuto Called');
 				var $this = $(this),
 					data = $this.data('groupedCrossFader');
 	            if (this.timer === null) {
