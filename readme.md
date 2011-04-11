@@ -36,6 +36,14 @@ Methods
 * init(): initializes the object, returns this
 * startAuto(): begins the auto fading between slugs, returns this
 * pauseAuto(): temporarily pauses the auto fading, returns this
+* next(): advances to the next slug, or loops to the first, returns this
+
+Options
+-------
+* time: time (in ms) between transitions (default: 6000) 
+* transitionSpeed: time (in ms) that individual transitions take (default: 500)
+* hoverPause: Pauses the auto transition if the user hovers over the parent (default: true)
+
 
 To come in later versions:
 --------------------------

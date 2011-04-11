@@ -24,6 +24,9 @@
 *		pauseAuto()	:	temporarily pauses the auto fading
 *						returns this
 *
+*		next()		:	advances to the next slug, or loops to the first
+*						returns this
+*
 *************************************************************************************
 *
 *	To come in later versions:
