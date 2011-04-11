@@ -53,8 +53,8 @@ To come in later versions:
 * A selection of callbacks
 * Add a prettier demo
 
-What won't be adding
---------------------
+What won't be added
+-------------------
 I want to keep this as light as possible, so I won't be adding the following
 
 * Carousel mod-cons like pagination and next/previous buttons. You will be able to roll your own using the callbacks.
