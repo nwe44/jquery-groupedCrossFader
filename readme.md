@@ -51,6 +51,7 @@ To come in later versions:
 * Ability to add items after initialization
 * Proper destroy function
 * A selection of callbacks
+* Make it work with responsive layouts
 * Add a prettier demo
 
 What won't be added
