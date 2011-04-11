@@ -58,12 +58,11 @@
 					var cw = $this.width();
 					
 					// put all elements in to an array, with a separate array item for their width
-					var $children = $this.children();
-					var slugWidth = 0;
-					var slugNo = 0;
-					var noOfSlugs = 0;
-					var maxHeight = 0;
-					
+					var $children = $this.children(),
+						slugWidth = 0,
+						slugNo = 0,
+						noOfSlugs = 0,
+						maxHeight = 0;
 					
 					for(var i = 0; i < $children.length; i++) {
 						var $slugItem = $children.eq(i);
@@ -88,7 +87,7 @@
 							noOfSlugs++;
 						}
 						
-						$slugItem.css("position", "absolute").css('left', slugWidth );
+						$slugItem.css("position", "absolute").css('left', slugWidth);
 						// add the current item's width to the slug width
 						slugWidth += slugItemWidth;	
 								
