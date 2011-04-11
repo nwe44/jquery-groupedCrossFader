@@ -7,6 +7,29 @@ does not need to know the width of any of the child items which can be of
 arbitrary and differing sizes and does not require any external css to function. 
 It only adds css classes and values it requires to function.
 
+Sample usage
+------------
+
+    <ul id="crossFader" style="width:1000px">
+        <li style="float:left;"><img src="dummyImage.jpg" width="200" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="400" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="500" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="300" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="100" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="200" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="500" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="200" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="500" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="300" height="100" /></li>
+        <li style="float:left;"><img src="dummyImage.jpg" width="100" height="100" /></li>
+    </ul>
+    
+    <script type="text/javascript">
+    $(document).ready(function() { 
+        $('#crossFader').groupedCrossFader();
+    });
+    </script>
+
 Methods
 -------
 
