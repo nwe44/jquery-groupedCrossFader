@@ -50,6 +50,11 @@ To come in later versions:
 
 * Ability to add items after initialization
 * Proper destroy function
-* Carousel mod-cons like pagination and next/previous buttons
 * A selection of callbacks
 * Add a prettier demo
+
+What won't be adding
+--------------------
+I want to keep this as light as possible, so I won't be adding the following
+
+* Carousel mod-cons like pagination and next/previous buttons. You will be able to roll your own using the callbacks.
