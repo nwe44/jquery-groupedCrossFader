@@ -78,12 +78,12 @@
 							continue;
 
 						// if adding the new slugItem will push us over then create a new slug
-						if(slugWidth + slugItemWidth > cw || i == $children.length -1 ){
+						if(slugWidth + slugItemWidth > cw){
 
 							if(!slugNo){
-								$children.slice(slugNo,(i == $children.length -1 ? $children.length : i  )).addClass("slug-" + noOfSlugs);
+								$children.slice(slugNo,i).addClass("slug-" + noOfSlugs);
 							}else{
-								$children.slice(slugNo,(i == $children.length -1 ? $children.length : i  )).addClass("slug-" + noOfSlugs).hide();
+								$children.slice(slugNo,i).addClass("slug-" + noOfSlugs).hide();
 							}
 							
 							//reset the slug width ready for the new slug
@@ -101,7 +101,11 @@
 						slugWidth += slugItemWidth;	
 								
 					}
-					
+					if(!slugNo){
+						$children.slice(slugNo,$children.length).addClass("slug-" + noOfSlugs);
+					}else{
+						$children.slice(slugNo,$children.length).addClass("slug-" + noOfSlugs).hide();
+					}					
 					$(this).height(maxHeight);
 
 					$(this).data('groupedCrossFader', {
