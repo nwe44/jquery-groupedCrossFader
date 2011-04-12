@@ -4,6 +4,54 @@
 		
 		
 			<style type="text/css">
+							/**
+				 * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+				 * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+				 * html5doctor.com/html-5-reset-stylesheet/
+				 */
+				
+				html, body, div, span, object, iframe,
+				h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+				abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+				small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+				fieldset, form, label, legend,
+				table, caption, tbody, tfoot, thead, tr, th, td,
+				article, aside, canvas, details, figcaption, figure,
+				footer, header, hgroup, menu, nav, section, summary,
+				time, mark, audio, video {
+				  margin: 0;
+				  padding: 0;
+				  border: 0;
+				  font-size: 100%;
+				  font: inherit;
+				  vertical-align: baseline;
+				}
+				
+				article, aside, details, figcaption, figure,
+				footer, header, hgroup, menu, nav, section {
+				  display: block;
+				}
+				
+				blockquote, q { quotes: none; }
+				
+				blockquote:before, blockquote:after,
+				q:before, q:after { content: ""; content: none; }
+				
+				em{color: #000; background: #f1f1f1;}
+				ins { background-color: #ff9; color: #000; text-decoration: none; }
+				
+				mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+				
+				del { text-decoration: line-through; }
+				
+				abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+				
+				table { border-collapse: collapse; border-spacing: 0; }
+				
+				hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+				
+				input, select { vertical-align: middle; }
+
 				body, html{
 					height: 100%;
 					position: relative;
@@ -12,39 +60,114 @@
 					font-family: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;
 				}
 				body{
-					width: 1000px;
-					margin: 100px auto;
+					width: 950px;
+					margin: 10px auto;
 					height: 500px;
+					font:13px/1.231 sans-serif; *font-size:small; 
 				}
-				ul{
+				h1, h2, h3, h4, h5, h6 { 
+					display: block;
+					border-top:1px solid #e2e2e2;
+					font-weight: bold; 
+					margin: 1em 0;
+					padding: 1em 0;
+					}
+				h1{
+					border: 0;
+				}
+				p{
+					padding: 1em 0;
+				}
+				#crossFader{
 					margin: 0 auto;
-					width:1000px;
+					width:950px;
 					border: 2px dashed #e2e2e2;
 					position: relative;
 				}
-				ul li{
-					padding: 20px 0 20px 20px;
+				#crossFader li{
+					padding: 10px 0 10px 10px;
 					list-style-image: none;
 					list-style: none;
 					float: left;
-				}		
+				}	
+				#visit,
+				#instructions{
+					width: 430px;
+				}	
+				#visit li,
+				#instructions li{
+					padding-bottom: 0.5em;
+				}	
+				#visit{
+				float: right;
+				}
 			</style>
 	</head>
 	<body>
 	<h1>jQuery groupedCrossFader Demo</h1>
     <ul id="crossFader" >
-        <li><img src="dummyImage.jpg" width="200" height="100" /></li>
-        <li><img src="dummyImage.jpg" width="400" height="100" /></li>
-        <li><img src="dummyImage.jpg" width="500" height="100" /></li>
-        <li><img src="dummyImage.jpg" width="300" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="50" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="40" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="50" height="100" /></li>
         <li><img src="dummyImage.jpg" width="100" height="100" /></li>
-        <li><img src="dummyImage.jpg" width="200" height="100" /></li>
-        <li><img src="dummyImage.jpg" width="500" height="100" /></li>
-        <li><img src="dummyImage.jpg" width="200" height="100" /></li>
-        <li><img src="dummyImage.jpg" width="500" height="100" /></li>
-        <li><img src="dummyImage.jpg" width="300" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="75" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="100" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="50" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="150" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="100" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="75" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="100" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="50" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="150" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="63" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="100" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="50" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="150" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="63" height="100" /></li>
+        <li><img src="dummyImage.jpg" width="100" height="100" /></li>
         <li><img src="dummyImage.jpg" width="100" height="100" /></li>
     </ul>
+    <div id="visit">
+	<p><a href="http://github.com/nwe44/jquery-groupedCrossFader" title="visit on github">Fork or download on github</a></p>
+	<h2>To come in later versions:</h2>
+
+<ul>
+<li>Ability to add items after initialization</li>
+<li>Proper destroy function</li>
+<li>A selection of callbacks</li>
+<li>Make it work with responsive layouts</li>
+<li>Add a prettier demo</li>
+</ul><h2>What won't be added</h2>
+
+<p>I want to keep this as light as possible, so I won't be adding the following</p>
+
+<ul>
+<li>Carousel mod-cons like pagination and next/previous buttons. You will be able to roll your own using the callbacks.</li>
+</ul>
+</div>
+<div id="instructions">
+<p>This plugin takes an item, groups it's children into slugs that have a smaller
+width than the parent and then fades between them. Unlike many carousels, it
+does not need to know the width of any of the child items which can be of
+arbitrary and differing sizes and does not require any external css to function.
+It only adds css classes and values it requires to function.</p>
+
+<h2>Methods</h2>
+
+<ul>
+<li><em>init()</em>: initializes the object, returns this</li>
+<li><em>startAuto()</em>: begins the auto fading between slugs, returns this</li>
+<li><em>pauseAuto()</em>: temporarily pauses the auto fading, returns this</li>
+<li><em>next()</em>: advances to the next slug, or loops to the first, returns this</li>
+</ul><h2>Options</h2>
+
+<ul>
+<li><em>time</em>: time (in ms) between transitions (default: 6000)</li>
+<li><em>transitionSpeed</em>: time (in ms) that individual transitions take (default: 500)</li>
+<li><em>hoverPause</em>: Pauses the auto transition if the user hovers over the parent (default: true)</li>
+</ul>
+</div>
+
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 	<script>window.jQuery || document.write("<script src='jquery-1.5.1.min.js'>\x3C/script>")</script>
